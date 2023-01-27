@@ -27,6 +27,11 @@ public class URLController {
 		return "Test API works!!";
 	}
 	
+	@GetMapping("/test2")
+	public String test2() {
+		return "Test API works!!";
+	}
+	
 	@PostMapping("/create")
 	public String createURL(@RequestBody URL url) {
 		String short_url = RandomStringUtils.randomAlphanumeric(4, 8);
@@ -57,5 +62,6 @@ public class URLController {
 		redirectView.setUrl(url.getStr());
 		return redirectView;
 	}
+	
 	
 }
